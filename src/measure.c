@@ -391,7 +391,7 @@ void meterd_measure_loop(void)
 /* Stop measuring */
 void meterd_measure_interrupt(void)
 {
-	INFO_MSG("Cancelling measurement");
+	INFO_MSG("Cancelling measurements");
 
 	run_measurement = 0;
 }
