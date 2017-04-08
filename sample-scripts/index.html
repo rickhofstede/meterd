@@ -18,6 +18,21 @@
 			var firstTabID = "";
 
 			function init() {
+				/* Retrieve contents from text files */
+				var xhrConsumed = new XMLHttpRequest();
+				xhrConsumed.onload = function () {
+					document.getElementById('consumed-statistics-contents').textContent = this.responseText;
+				};
+				xhrConsumed.open('GET', 'txt/consumed.stat');
+				xhrConsumed.send();
+
+				var xhrGas = new XMLHttpRequest();
+				xhrGas.onload = function () {
+					document.getElementById('gas-statistics-contents').textContent = this.responseText;
+				};
+				xhrGas.open('GET', 'txt/gas.stat');
+				xhrGas.send();
+
 				/* Grab the tab links and content divs from the page */
 				var tabListItems = document.getElementById('tabs').childNodes;
 				for ( var i = 0; i < tabListItems.length; i++ ) {
@@ -135,8 +150,10 @@
 			<li><a href="#raw-week">Raw (week)</a></li>
 			<li><a href="#consumed-day">Consumed/produced (day)</a></li>
 			<li><a href="#consumed-week">Consumed/produced (week)</a></li>
+			<li><a href="#consumed-statistics">Consumed/produced (statistics)</a></li>
 			<li><a href="#gas-day">Gas (day)</a></li>
 			<li><a href="#gas-week">Gas (week)</a></li>
+			<li><a href="#gas-statistics">Gas (statistics)</a></li>
 		</ul>
 
 		<div class="tabContent plot" id="raw-hour">
@@ -159,12 +176,20 @@
 			<img src="img/consumed-week.svg" alt="" />
 		</div>
 
+		<div class="tabContent" id="consumed-statistics">
+			<pre id="consumed-statistics-contents" />
+		</div>
+
 		<div class="tabContent plot" id="gas-day">
 			<img src="img/gas-day.svg" alt="" />
 		</div>
 
 		<div class="tabContent plot" id="gas-week">
 			<img src="img/gas-week.svg" alt="" />
+		</div>
+
+		<div class="tabContent" id="gas-statistics">
+			<pre id="gas-statistics-contents" />
 		</div>
 	</body>
 </html>
