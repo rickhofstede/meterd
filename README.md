@@ -1,12 +1,11 @@
-
-##Smart Meter Monitoring Daemon (meterd)
+## Smart Meter Monitoring Daemon (meterd)
 
 Copyright (c) 2014 Roland van Rijswijk-Deij
 
 All rights reserved. This software is distributed under a BSD-style
 license. For more information, see LICENSE.
 
-###1. Introduction
+### 1. Introduction
 
 The Smart Meter Monitoring Daemon - or 'meterd' for short - allows you to
 monitoring your current electricity consumption, to graph it using a variety
@@ -20,23 +19,23 @@ that meets the Dutch Smart Meter Requirements (DSMR) 3.0 or up. Note that at
 present the software has only been tested with a limited number of smart
 meters; for more information see below under 'Testing' and 'Known Working'.
 
-###2. Prerequisites
+### 2. Prerequisites
 
 To build meterd you will need to have the following software installed:
 
- - libconfig (>= 1.3.2), [ C/C++ Configuration File Library ](http://www.hyperrealm.com/libconfig/) (on Raspbian you need to install `libconfig-dev`)
- - SQLite3 (>= 3.7.0), [ A self-contained in-process database ](http://www.sqlite.org) (on Raspbian you need to install `libsqlite3-dev`)
- - autoconf [ Automatic configure script builder ](http://www.gnu.org/software/autoconf/autoconf.html)
- - libtool [ Generic library support ](http://www.gnu.org/software/libtool/)
+ - libconfig (>= 1.3.2): [ C/C++ Configuration File Library ](http://www.hyperrealm.com/libconfig/) (on Raspbian you need to install `libconfig-dev`)
+ - SQLite3 (>= 3.7.0): [ A self-contained in-process database ](http://www.sqlite.org) (on Raspbian you need to install `libsqlite3-dev`)
+ - autoconf: [ Automatic configure script builder ](http://www.gnu.org/software/autoconf/autoconf.html)
+ - libtool: [ Generic library support ](http://www.gnu.org/software/libtool/)
 
 Extra:
  - gnuplot for creating graphs
 
-###3. Building
+### 3. Building
 
 To build meterd, first clone the meterd repository:
 ```
-$ git clone https://github.com/rijswijk/meterd
+$ git clone https://github.com/rickhofstede/meterd
 ```
 Then, in order to build meterd, execute the following commands:
 ```
@@ -46,7 +45,7 @@ $ ./configure
 $ make
 ```
 
-###4. Installing 
+### 4. Installing
 
 To install meterd as a regular user, run:
 ```
@@ -63,20 +62,15 @@ Final steps:
  - Run `meterd-createdb -c /etc/meterd.conf`
  - Copy `sample-scripts/plot-*.sh` to `/usr/local/bin/`
 
-###5. Configuration
+### 5. Configuration
 
 TBD
 
-###6. Testing
+### 6. Testing
 
 TBD
 
-###7. Known Working
+### 7. Known Working
 
 TBD
 
-###8. Contact
-
-Questions/remarks/suggestions/praise on this tool can be sent to:
-
-Roland van Rijswijk-Deij 	<roland@mazuki.nl>
