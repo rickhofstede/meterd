@@ -25,11 +25,12 @@ To build meterd you will need to have the following software installed:
 
  - libconfig (>= 1.3.2): [ C/C++ Configuration File Library ](http://www.hyperrealm.com/libconfig/) (on Raspbian you need to install `libconfig-dev`)
  - SQLite3 (>= 3.7.0): [ A self-contained in-process database ](http://www.sqlite.org) (on Raspbian you need to install `libsqlite3-dev`)
- - autoconf: [ Automatic configure script builder ](http://www.gnu.org/software/autoconf/autoconf.html)
- - libtool: [ Generic library support ](http://www.gnu.org/software/libtool/)
+ - autoconf: [ Automatic configure script builder ](http://www.gnu.org/software/autoconf/autoconf.html) (on Raspbian you need to install `autoconf`)
+ - libtool: [ Generic library support ](http://www.gnu.org/software/libtool/) (on Raspbian you need to install `libtool`)
 
 Extra:
- - gnuplot for creating graphs
+ - [ gnuplot ](http://www.gnuplot.info) for creating graphs (on Raspbian you need to install `gnuplot`)
+ - [ lighttphd ](https://www.lighttpd.net) for servicing a simple Web interface (on Raspbian you need to install `lighttphd`)
 
 ### Building
 
